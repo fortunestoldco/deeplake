@@ -26,4 +26,4 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Command to run the service
-CMD ["python", "-m", "sdk_codeassist.main", "--api"]
+CMD ["python", "-m", "codelake.main", "--api"]

@@ -7,7 +7,7 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_community.utilities import GoogleSearchAPIWrapper, GoogleSerperAPIWrapper
 from langchain_community.document_loaders import WebBaseLoader
 from bs4 import BeautifulSoup
-from sdk_codeassist.config import settings
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 

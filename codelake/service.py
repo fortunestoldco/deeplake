@@ -10,10 +10,10 @@ from rich.syntax import Syntax
 from rich.markdown import Markdown
 from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
-from sdk_codeassist.retrieval import setup_retriever
-from sdk_codeassist.planning import setup_planner
-from sdk_codeassist.generation import setup_generator
-from sdk_codeassist.config import settings
+from codelake.retrieval import setup_retriever
+from codelake.planning import setup_planner
+from codelake.generation import setup_generator
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 
@@ -164,7 +164,7 @@ class CodeSession:
         return response
 
 # FastAPI service for the API mode
-app = FastAPI(title="SDK CodeAssist API")
+app = FastAPI(title="codelake API")
 
 class CodeRequest(BaseModel):
     message: str
@@ -209,14 +209,14 @@ async def generate_code(request: CodeRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 def run_service(dataset_path: str):
-    """Run the SDK CodeAssist as an API service."""
+    """Run the codelake as an API service."""
     import uvicorn
-    logger.info(f"Starting SDK CodeAssist API on {settings.api_host}:{settings.api_port}")
+    logger.info(f"Starting codelake API on {settings.api_host}:{settings.api_port}")
     uvicorn.run(app, host=settings.api_host, port=settings.api_port)
 
 def run_interactive_session(dataset_path: str):
     """Run an interactive session in the terminal."""
-    console.print("[bold green]SDK CodeAssist Interactive Session[/bold green]")
+    console.print("[bold green]codelake Interactive Session[/bold green]")
     console.print("Type your code generation requests or questions. Type 'exit' to quit.")
     
     # Create session

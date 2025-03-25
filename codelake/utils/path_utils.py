@@ -1,7 +1,7 @@
 import re
 import os
 from urllib.parse import urlparse
-from sdk_codeassist.config import settings
+from codelake.config import settings
 
 def is_valid_sdk_path(path: str) -> bool:
     """

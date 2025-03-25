@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from sdk_codeassist.config import settings
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 

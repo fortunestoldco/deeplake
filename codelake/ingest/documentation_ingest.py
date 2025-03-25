@@ -20,7 +20,7 @@ from langchain_text_splitters import (
 )
 from langchain_openai import OpenAIEmbeddings
 from langchain_deeplake.vectorstores import DeeplakeVectorStore
-from sdk_codeassist.utils.path_utils import is_valid_sdk_path
+from codelake.utils.path_utils import is_valid_sdk_path
 
 logger = logging.getLogger(__name__)
 

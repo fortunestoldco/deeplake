@@ -2,18 +2,18 @@ import os
 import logging
 import argparse
 from dotenv import load_dotenv
-from sdk_codeassist.ingest import documentation_ingestion
-from sdk_codeassist.retrieval import setup_retriever
-from sdk_codeassist.planning import setup_planner
-from sdk_codeassist.generation import setup_generator
-from sdk_codeassist.service import run_service, run_interactive_session
+from codelake.ingest import documentation_ingestion
+from codelake.retrieval import setup_retriever
+from codelake.planning import setup_planner
+from codelake.generation import setup_generator
+from codelake.service import run_service, run_interactive_session
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("sdk_codeassist.log"),
+        logging.FileHandler("codelake.log"),
         logging.StreamHandler()
     ]
 )
@@ -24,7 +24,7 @@ def main():
     load_dotenv()
     
     # Configure command line arguments
-    parser = argparse.ArgumentParser(description='SDK CodeAssist: Deep Lake-powered code generation')
+    parser = argparse.ArgumentParser(description='codelake: Deep Lake-powered code generation')
     parser.add_argument('--ingest', action='store_true', help='Ingest SDK documentation')
     parser.add_argument('--interactive', action='store_true', help='Run in interactive mode')
     parser.add_argument('--api', action='store_true', help='Start API server')

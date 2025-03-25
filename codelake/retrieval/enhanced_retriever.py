@@ -4,8 +4,8 @@ from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 from langchain_openai import OpenAIEmbeddings
 from langchain_deeplake.vectorstores import DeeplakeVectorStore
-from sdk_codeassist.retrieval.web_search import WebSearchRetriever
-from sdk_codeassist.config import settings
+from codelake.retrieval.web_search import WebSearchRetriever
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 

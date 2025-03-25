@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
-from sdk_codeassist.ingest import documentation_ingestion
-from sdk_codeassist.retrieval import setup_retriever
-from sdk_codeassist.planning import setup_planner 
-from sdk_codeassist.generation import setup_generator
+from codelake.ingest import documentation_ingestion
+from codelake.retrieval import setup_retriever
+from codelake.planning import setup_planner 
+from codelake.generation import setup_generator
 
 # Load environment variables
 load_dotenv()

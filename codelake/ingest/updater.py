@@ -4,8 +4,8 @@ import logging
 import schedule
 from datetime import datetime
 from typing import List, Optional
-from sdk_codeassist.ingest.documentation_ingestion import ingest_sdk_documentation
-from sdk_codeassist.config import settings
+from codelake.ingest.documentation_ingestion import ingest_sdk_documentation
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 

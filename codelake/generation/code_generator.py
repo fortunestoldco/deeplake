@@ -6,8 +6,8 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-from sdk_codeassist.planning.task_planner import CodePlan, CodeTask
-from sdk_codeassist.config import settings
+from codelake.planning.task_planner import CodePlan, CodeTask
+from codelake.config import settings
 
 logger = logging.getLogger(__name__)
 
