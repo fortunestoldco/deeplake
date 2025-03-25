@@ -2,7 +2,7 @@ import os
 import logging
 import argparse
 from dotenv import load_dotenv
-from codelake.ingest import documentation_ingestion
+from codelake.ingest import documentation_ingest
 from codelake.retrieval import setup_retriever
 from codelake.planning import setup_planner
 from codelake.generation import setup_generator
