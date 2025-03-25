@@ -7,6 +7,7 @@ from codelake.retrieval import setup_retriever
 from codelake.planning import setup_planner
 from codelake.generation import setup_generator
 from codelake.service import run_service, run_interactive_session
+from codelake.settings import deeplake_dataset_path
 
 # Configure logging
 logging.basicConfig(
